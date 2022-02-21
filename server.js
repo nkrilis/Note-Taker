@@ -63,29 +63,29 @@ app.post('/api/notes', (req, res) =>
     }
 });
 
-app.delete('api/notes/:id', (req, res) => 
-{
-    if(req.params)
-    {
-        fs.readFile(`./db/db.json`, (err, data) =>
-        {
+// app.delete('api/notes/:id', (req, res) => 
+// {
+//     if(req.params)
+//     {
+//         fs.readFile(`./db/db.json`, (err, data) =>
+//         {
 
-            console.log(data);
+//             console.log(data);
 
-            // let json = JSON.parse(data);
-            // json.filter()
+//             let json = JSON.parse(data);
+//             let newDb = json.filter()
 
-            //     // Write the string to a file
-            // fs.writeFile(`./db/db.json`,JSON.stringify(json), (err) =>
-            //     err
-            //     ? console.error(err)
-            //     : console.log(`Note for ${newNote.title}  with id of ${newNote.uniqid} has been written to JSON file`)
-            // );
+//                 // Write the string to a file
+//             fs.writeFile(`./db/db.json`,JSON.stringify(json), (err) =>
+//                 err
+//                 ? console.error(err)
+//                 : console.log(`Note for ${newNote.title}  with id of ${newNote.id} has been written to JSON file`)
+//             );
 
-        })
-    } 
+//         })
+//     } 
 
-});
+// });
 
 
 // GET Route for any route not defined
