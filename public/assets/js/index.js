@@ -40,7 +40,10 @@ const saveNote = (note) =>
       'Content-Type': 'application/json',
     },
     body: JSON.stringify(note),
-  });
+  },
+  // Added a reload everytime the save button is hit so that the note list is populated again
+  window.location.reload()
+  );
 
 const deleteNote = (id) =>
   fetch(`/api/notes/${id}`, {
@@ -48,7 +51,10 @@ const deleteNote = (id) =>
     headers: {
       'Content-Type': 'application/json',
     },
-  });
+  },
+  // Added a reload everytime the save button is hit so that the note list is populated again
+  window.location.reload()
+  );
 
 const renderActiveNote = () => {
   hide(saveNoteBtn);
